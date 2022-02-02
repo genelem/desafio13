@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body .formulario{
+    background-color: rgb(220, 220, 220);
+    padding: 30px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 20px;
+}
+
+body .formulario h3{
+    margin: auto;
+    text-align: center;
+}
+
+body .formulario form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+body .formulario form h4{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+body .formulario form input{
+    padding: 5px;
+    margin: 3px 0px 5px 0px;
+}
+
+body .formulario form .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+body .formulario form .buttons input{
+    background-color: rgb(32, 70, 223);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+

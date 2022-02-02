@@ -1,36 +1,41 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
-
 h3{
     font-size: 24px;
 }
-
 p{
     font-size: 12px;
 }
-div.top-header{
-    padding: 5%;
-}
-
 header{
     background-color: #EAC926;
 }
-
-header div.logo{
-    width: 50%;
-    
+.logo_search{
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
-
+.logo_search .form{
+    display: flex;
+    width: 50%;
+    font-size: 15px;
+    max-height: 20px;
+}
 header div.logo{
+    display: flex;
+    width: 50%;
     padding: 10px;
-    
+    justify-content: center;
+}
+header div.logo img{
+    max-height: 40px;
 }
 header nav{
     font-size: 12px;
@@ -45,30 +50,26 @@ header ul li a{
     color: #000;
 }
 
-header .form .input{
+header form .input{
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
     color: #666;
     padding: 2px;
 }
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
+header form button{
+    border: 0px;
+    margin-left: 5px;
+    background-color: #EAC926;
 }
-
 header div.top-header p{
     width: 100%;
     text-align: center;
     margin-top: 10px;
 }
-
 div.burger-menu{
     text-align: center;
 }
-
 div.burger-menu i{
     background-color: #0044AA;
     border-radius: 5px;
@@ -79,65 +80,155 @@ div.burger-menu i{
     padding: 10px;
     width: 40px;
 }
-
 article div.main-article{
     width: 100%;
 }
-
 .price{
     font-size: 18px;
-  
 }
-
-.discount,
+.discount{
+    font-size: 16px;
+    font-weight: normal;
+}
 .description{
     font-size: 16px;
     font-weight: normal;
-    
+    display: none;
+    transition: all 1s;
 }
-
+article:hover .description{
+    display: block;
+}
 h3,
 .description{
     color: #666;
-
+    margin-left: 80px;
+    padding-bottom: 10px;
 }
-
 section.banner img{
     width: 100%;
-    
 }
-
 main{
+    margin: 0px;
     width: 90%;
-    margin:auto;
+    margin: auto;
 }
-
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+}
 main section article{
     background-color: #fff;
-    margin: 10px;
-
-    
+    max-width: 300px;
+    margin: 5px;
 }
-
 main section article img{
     width: 100%;
-
 }
-
 main section article i,
 .discount{
     color: #39b54a;
-    border-top-width: solid 1px #ebebeb;
-    border-width: 15
-    
+    padding-left: 10px;
 }
-
-@media (min-width:361px)  {        
-
-}  
-
-@media(max-width: 769px)  { 
-};
-
-
-
+.main-article .precios{
+    display: flex;
+    width: 100%;
+}
+.main-article .precios .price{
+    width: 30%;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.main-article .precios .discount{
+    width: 70%;
+}
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    bottom: 15px;
+    transition: all 1.2s;
+}
+main section article i:hover{
+    transform: rotate(-90deg);
+}
+.nav_1y2{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    display: none;
+    padding: 15px 0px;
+}
+.nav_1{
+    display: flex;
+} 
+.nav_1 li , .nav_2 li{
+    margin: 0px 10px;
+}
+.nav_2{
+    display: flex;
+} 
+footer{
+    text-align: center;
+}
+footer ul{
+    list-style-type: none;
+}
+footer i{
+    color: blue;
+    font-size: 2em;
+    margin-top: 10px;
+}
+footer i:hover{
+    color: rgb(0, 187, 255)
+}
+footer h5{
+    padding: 15px;
+}
+@media (min-width: 361px){
+    main article{
+        box-shadow : 0px 0px 0px rgb( 100 , 100 , 100 );
+        transition: all 1s;
+    }
+    main article:hover{
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+    .products{
+        max-width: 700px ;
+        margin: auto;
+    }    
+}
+@media (min-width: 769px){
+    .nav_1y2{
+        display: flex;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .products{
+        max-width: 1500px ;
+        margin: auto;
+    }
+    .top-header{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    header div.top-header .cuotas{
+        width: 33%;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: row;
+    }
+}
